@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KanbanTool</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="title"> Kanban Tool </div>
+    <div class="container">
+        <div class="panel">
+            <input id="new-todo" placeholder="Enter new todo" />
+            <button onclick="someFunc()">Add </button>
+        </div>
+        <div id="board">
+            <div id="todo" class="box shadowRed" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="todo-title">TO DO</div>
+            </div>
+            <div id="inprogress" class="box shadowGreen" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="inprogress-title">IN PROGRESS</div>
+            </div>
+            <div id="done" class="box shadowYellow" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="done-title">DONE</div>
+            </div>
+        </div>
+    </div>
+    <script src="draganddrop.js"></script>
+    <script src="app.js"></script>
+    <script src="animation.js"></script>
+</body>
+
+</html>
